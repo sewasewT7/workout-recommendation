@@ -1,0 +1,84 @@
+/* Workout.css */
+body {
+
+  font-family: Arial, sans-serif;
+}
+
+.bg-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -2; /* Keeps it behind everything */
+}
+
+.bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../assets/bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  filter: blur(2.5px);
+}
+.workout-container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  background: rgba(28, 28, 28, 0.781);
+  text-align: center;
+  /* background: transparent;
+  backdrop-filter: blur(20px); */
+  overflow: hidden;
+}
+
+h2 {
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+.workout-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+label {
+  font-weight: bold;
+  margin-top: 5px;
+  color: #a9a6a6;
+}
+input,
+select {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #cccccc;
+  transition: all 0.3s ease-in-out;
+}
+input:focus,
+select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+button {
+  margin-top: 15px;
+  padding: 12px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+h3 {
+  margin-top: 20px;
+  color: #27ae60;
+}
