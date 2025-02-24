@@ -49,45 +49,16 @@
 // };
 
 // export default Home;
-
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom"; // Use React Router for navigation
+import { Link } from "react-router-dom";
 import styles from "../styles/Home.module.css";
-import logo from "../assets/logoavif.png";
 import card1 from "../assets/card1.jpg";
 import card2 from "../assets/card2.jpg";
 import card3 from "../assets/card3.webp";
 // Assuming you're using a CSS module for styling
 
 export default function Home() {
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
     <div className={styles.container}>
-      <header
-        className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}
-      >
-        <div className={styles.logo}>
-          <img src={logo} alt="Workout Planner Logo" />
-          <span>LunaFitness</span>
-        </div>
-        <nav className={styles.nav}>
-          <Link to="/">Home</Link>
-          <Link to="/workout">Get Started</Link>
-          <Link to="/about">About</Link>
-          <Link to="/contact">Contact</Link>
-        </nav>
-      </header>
-
       <main className={styles.main}>
         <section className={styles.hero}>
           <h1 className={styles.title}>
